@@ -14,7 +14,7 @@ app.add_url_rule("/uploads/<name>", endpoint="download_file", build_only=True)
 
 
 @app.route("/", methods=['GET', 'POST'])
-def upload():
+def upload():  # uploading files on web
     if flask.request.method == 'POST':
         file = flask.request.files['file']
         filename = secure_filename(file.filename)
@@ -24,13 +24,13 @@ def upload():
 
 
 @app.route("/upload", methods=['GET', 'POST'])
-def uploaded_files():
+def uploaded_files():  # displaying list of files on web
     direct = os.listdir(str(upload_dir))
     return flask.render_template("uploaded.html", direct=direct)
 
 
 @app.route("/display", methods=['GET', 'POST'])
-def display():
+def display():  # displaying of database on web
     db = Database("database.db")
     db.create_table()
     db.insert_data()
@@ -39,4 +39,4 @@ def display():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True)  # start of app
