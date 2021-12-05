@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Display</title>
+  <style type="text/css">
+   TABLE {
+    table-layout: fixed;
+   }
+  </style>
+     </head>
+<body>
+    <div>
+        {% for line in data %}
+        <div>
+            <table width="100%">
+                <tr><td width="60" height="5" valign="center">{{line[0]}}</td>
+                    <td width="60" height="5" valign="center">{{line[1]}}</td>
+                    <td width="60" height="5" valign="center">{{line[2]}}</td>
+                    <td width="60" height="5" valign="center">{{line[3]}}</td>
+                    <td width="60" height="5" valign="center">{{line[4]}}</td>
+                    <td width="60" height="5" valign="center">{{line[5]}}</td>
+                    <td width="60" height="5" valign="center">{{line[6]}}</td></tr>
+            </table>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

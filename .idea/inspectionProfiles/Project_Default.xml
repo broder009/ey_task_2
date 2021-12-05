@@ -1,0 +1,16 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="list.Counter" />
+          <option value="int.__getitem__" />
+          <option value="dict.get" />
+          <option value="django_social_app.social_app.social_app_1.urls.*" />
+          <option value="core" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
